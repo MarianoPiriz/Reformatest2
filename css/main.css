@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "AlegreS";
-  src: url(../fuentes/AlegreS.ttf);
+  src: url(../fuentes/alegresans.ttf);
 }
 
 @font-face {
@@ -15,17 +15,17 @@
 }
 
 @font-face {
-  font-family: ARL;
+  font-family: "ARL";
   src: url(../fuentes/ARL.TTF);
 }
 
 @font-face {
-  font-family: GroteskBold;
+  font-family: "GroteskBold";
   src: url(../fuentes/GroteskBold.ttf);
 }
 
 @font-face {
-  font-family: Grotesk;
+  font-family: "Grotesk";
   src: url(../fuentes/Grotesk.ttf);
 }
 
