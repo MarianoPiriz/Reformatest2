@@ -1,0 +1,544 @@
+/************************************************************************************************** FONTS */
+@font-face {
+  font-family: "Bebas";
+  src: url(../fuentes/BEBAS.TTF);
+}
+
+@font-face {
+  font-family: "AlegreS";
+  src: url(../fuentes/AlegreS.ttf);
+}
+
+@font-face {
+  font-family: "Franchise";
+  src: url(../fuentes/Franchise.ttf);
+}
+
+@font-face {
+  font-family: ARL;
+  src: url(../fuentes/ARL.TTF);
+}
+
+@font-face {
+  font-family: GroteskBold;
+  src: url(../fuentes/GroteskBold.ttf);
+}
+
+@font-face {
+  font-family: Grotesk;
+  src: url(../fuentes/Grotesk.ttf);
+}
+
+/* ****************************************************************************************************BODY */
+
+html {
+  box-sizing: border-box;
+  background-color: #f89007;
+  padding: 0;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  padding: 0.5em;
+  font-family: ARL;
+}
+li {
+  list-style: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/***************************************************************************************** HEADER */
+
+.header-wrapper {
+  width: 100%;
+}
+
+.btn-menu {
+  margin: 2%;
+  display: inline;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  user-select: none;
+  position: absolute;
+  top: 4%;
+  z-index: 10000;
+}
+
+.btn__home {
+  user-select: none;
+}
+
+#logoInicio {
+  width: 17vw;
+  margin-top: 4vh;
+  margin-left: 75%;
+  animation-name: spinlogo;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 2s;
+  animation-iteration-count: 1;
+}
+
+#logoInicio a {
+  display: block;
+}
+
+@keyframes spinlogo {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+/* **************************************************************************************NAV */
+#mainNav {
+  width: 100%;
+  height: 28vh;
+  /* background-color: black; */
+  display: none;
+  margin-top: 3%;
+  padding-top: 4%;
+  transform: translateY(-200%);
+  transition: transform ease-out 500ms;
+  overflow: hidden;
+  animation: navHeight 500ms cubic-bezier(0.76, 0.07, 0.58, 1);
+}
+@keyframes navHeight {
+  from {
+    height: 0;
+  }
+  to {
+    height: 28vh;
+  }
+}
+@keyframes navSwrink {
+  from {
+    height: 28vh;
+  }
+  to {
+    height: 0;
+  }
+}
+
+#mainNav ul {
+  display: inline-block;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+#mainNav a {
+  display: block;
+  font-family: "GroteskBold";
+  font-size: 5vw;
+  padding-bottom: 4px;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.separador1 {
+  width: 100%;
+  height: 0.15vh;
+  background-color: black;
+}
+
+/********************************************************************************************************* MAIN */
+.maincontent {
+  width: 90%;
+  margin-left: 5%;
+  opacity: 0;
+  display: none;
+  transition: opacity 0.5s ease-in;
+}
+
+.mainSection {
+  width: 100%;
+  margin-top: 0px;
+  display: flex;
+  overflow: hidden;
+  align-items: flex-start;
+}
+
+.inicio {
+  transform: translateX(0);
+  transition: transform ease-out 500ms;
+}
+
+.dise {
+  max-width: 100%;
+  display: block;
+  transform: translateX(100%);
+  transition: transform cubic-bezier(0.56, -0.01, 0, 1.31) 500ms;
+}
+.diseCover {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.numeral {
+  font-family: ARL;
+  font-size: 16vw;
+  color: white;
+  position: absolute;
+  top: 530px;
+  left: 280px;
+  z-index: 2;
+}
+
+.obras {
+  width: 100%;
+  display: block;
+  transform: translateX(100%);
+  transition: transform cubic-bezier(0.56, -0.01, 0, 1.31) 500ms;
+}
+
+.servicios {
+  width: 100%;
+  display: block;
+  transform: translateX(100%);
+  transition: transform cubic-bezier(0.56, -0.01, 0, 1.31) 500ms;
+  letter-spacing: 3%;
+}
+
+.mail {
+  width: 100%;
+  display: block;
+  transform: translateX(100%);
+  transition: transform cubic-bezier(0.56, -0.01, 0, 1.31) 500ms;
+}
+
+.mainTitle {
+  font-family: "AlegreS";
+  /* text-align: center; */
+  font-size: 35vw;
+  font-weight: lighter;
+  line-height: 17vh;
+  margin: 0;
+}
+
+.separador2 {
+  width: 100%;
+  height: 0.15vh;
+  background-color: black;
+}
+
+.subtitle {
+  font-family: "GroteskBold";
+  font-size: 5vw;
+  margin-left: 1%;
+  color: #504f4f;
+}
+.bars {
+  color: white;
+}
+
+.imgwrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.imgTitleA {
+  padding: 13px;
+  font-family: GroteskBold;
+  font-size: 7vw;
+  position: absolute;
+  top: 18px;
+  color: rgb(255, 255, 255);
+  z-index: 2;
+}
+
+.imgTitleB {
+  padding: 13px;
+  font-family: GroteskBold;
+  font-size: 5vw;
+  position: absolute;
+  top: 250px;
+  color: rgb(255, 255, 255);
+  z-index: 2;
+}
+
+#initimgA {
+  max-width: 100%;
+  filter: opacity(40%);
+
+  z-index: -1;
+}
+
+#initimgB {
+  max-width: 100%;
+  border-radius: 10px;
+  filter: opacity(40%);
+  object-fit: fill;
+  z-index: -1;
+}
+
+.quienSon {
+  padding-bottom: 200px;
+  padding-top: 50px;
+}
+.quienSon h3 {
+  font-family: "ARL";
+  border-bottom: 1px solid black;
+}
+.quienSon p {
+  font-family: "Grotesk";
+  margin-right: 20px;
+}
+
+/* *********************************************************************************************FOOTER */
+
+#footerContainer {
+  background-image: url(../img/TopBottomLoader2.png);
+  background-size: cover;
+  background-color: #f89007;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  /* padding-top: 3%;
+  padding-bottom: 3%; */
+  background-repeat: no-repeat;
+  object-fit: contain;
+}
+.footer-nav {
+  box-sizing: border-box;
+  padding: 1%;
+  width: 80%;
+  border: 1px black solid;
+  background-color: #f89007;
+  text-align: center;
+  align-items: center;
+  margin-left: 10%;
+}
+
+.social-links {
+  width: 9vw;
+}
+
+.derechos {
+  padding: 0;
+  margin: 0;
+  font-family: "Grotesk";
+  font-size: 3vw;
+}
+
+.form-info {
+  margin-left: 2%;
+}
+
+.form-info h2 {
+  font-size: 2.5rem;
+}
+
+.info_box {
+  margin-top: 5%;
+}
+
+.form-info h3 {
+  font-size: 2rem;
+}
+.form-info p {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+}
+
+.form-info a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 0.8rem;
+}
+
+.formStyle {
+  width: 38vw;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.4rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  outline-color: transparent;
+  outline-width: 1px;
+  border-bottom: 0.04rem solid white;
+}
+
+#text_box {
+  resize: none;
+}
+
+input {
+  height: 2.3rem;
+  outline: none;
+}
+
+textarea {
+  margin-top: 5%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+.enviaMsg {
+  width: 10rem;
+  height: 2.5rem;
+  background: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 900;
+  color: white;
+  border-color: transparent;
+  margin: 1.5rem 0 0.6rem 0;
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  letter-spacing: 0.5rem;
+  cursor: pointer;
+}
+
+.enviaMsg:hover {
+  background: #504f4f;
+  transition: all 500ms ease-in-out;
+}
+
+/* *********************************************************************************MEDIA QUERYS */
+
+@media (min-width: 568px) {
+  .footer-nav {
+    display: flex;
+    flex-direction: row;
+  }
+  .social-links {
+    width: 4vw;
+  }
+  .derechos {
+    font-size: 1.7vw;
+  }
+  .subtitle {
+    margin-top: 10%;
+  }
+
+  #mainNav {
+    height: 50vh;
+  }
+  #logoInicio {
+    margin-left: 85%;
+  }
+  #mainNav a {
+    font-size: 3vw;
+  }
+  .imgTitleB {
+    top: 340px;
+    font-size: 4vw;
+  }
+  .numeral {
+    top: 930px;
+    left: 450px;
+  }
+}
+
+@media (min-width: 700px) {
+  .imgTitleB {
+    top: 340px;
+    position: initial;
+    font-size: 2vw;
+  }
+  .numeral {
+    font-size: 10vw;
+    top: 690px;
+    left: 218px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .social-links {
+    width: 2vw;
+  }
+  .derechos {
+    font-size: 1vw;
+  }
+
+  #footerContainer {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+    justify-content: center;
+  }
+  .footer-nav {
+    padding: 1% 20%;
+  }
+  #logoInicio {
+    margin-left: 90%;
+  }
+  #mainNav {
+    height: 50vh;
+  }
+
+  #initimgA {
+    margin-left: 20%;
+  }
+
+  #initimgB {
+    width: 100%;
+  }
+  .imgTitle {
+    font-size: 5vw;
+  }
+  .quienSon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .quienSon h3 {
+    margin-right: 30px;
+  }
+  .numeral {
+    font-size: 8vw;
+    top: 895px;
+    left: 360px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #initimgA {
+    margin-left: 60%;
+  }
+  .imgTitleA {
+    font-size: 5vw;
+    top: 18px;
+  }
+
+  #initimgB {
+    object-fit: contain;
+  }
+
+  .numeral {
+    font-size: 8vw;
+    top: 139vh;
+    left: 44vw;
+  }
+}

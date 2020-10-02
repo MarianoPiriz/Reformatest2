@@ -1,0 +1,80 @@
+/* LOADER */
+
+.loader {
+  font-family: "Grotesk";
+  width: 100%;
+  text-align: center;
+  opacity: 1;
+  display: block;
+  transition: opacity 1.5s ease-in;
+}
+
+.bordertop {
+  background-image: url(../img/TopBottomLoader2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 60px;
+}
+
+.borderbottom {
+  background-image: url(../img/TopBottomLoader2.png);
+  position: absolute;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 60px;
+}
+
+.logoloader {
+  width: 10vh;
+  position: relative;
+  top: 36vh;
+}
+
+.line1 {
+  width: 30%;
+  height: 0.1vh;
+  background-color: rgb(194, 192, 192);
+  margin-left: 35%;
+  margin-top: 39vh;
+  position: relative;
+  font-size: 2vh;
+  line-height: 4vh;
+}
+
+.line2 {
+  width: 0%;
+  height: 0.1vh;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: loaderblackline 5000ms ease-in-out 1s;
+}
+
+@keyframes loaderblackline {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.line1::after {
+  content: "...";
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  animation: dots steps(4, end) 2s infinite;
+  width: 0px;
+}
+
+@keyframes dots {
+  to {
+    width: 1em;
+  }
+}
